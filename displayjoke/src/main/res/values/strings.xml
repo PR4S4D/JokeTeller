@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Display Joke</string>
+    <string name="sample_joke">My friend thinks he is smart. He told me an onion is the only food that makes you cry,\
+   so I threw a coconut at his face.</string>
+</resources>

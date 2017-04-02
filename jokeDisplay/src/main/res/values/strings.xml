@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Joke Display</string>
+    <string name="sample_joke">A sandwich walks into a bar. The barman says \'Sorry we don\'t serve food in here\'</string>
+</resources>

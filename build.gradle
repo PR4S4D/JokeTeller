@@ -1,0 +1,49 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task runAppEngine{
+    evaluationDependsOn ':Joke Provider'
+    project(':Joke Provider'){
+        appengine{
+            daemon true
+        }
+    }
+    dependsOn ':Joke Provider:appengineRun'
+
+}
+
+task stopAppEngine{
+    evaluationDependsOn ':Joke Provider'
+    project(':Joke Provider'){
+        appengine{
+            daemon true
+        }
+    }
+    dependsOn ':Joke Provider:appengineStop'
+    shouldRunAfter 'app:connectedAndroidTest'
+}
+
+task test{
+
+    dependsOn ':runAppEngine'
+    dependsOn 'app:connectedAndroidTest'
+    dependsOn ':stopAppEngine'
+    print "success"
+}

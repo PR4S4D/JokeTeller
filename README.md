@@ -1,5 +1,5 @@
 # Joke Teller
-This app displays the jokes supplied from a Google Cloud Endpoint```
+This app displays the jokes supplied from a Google Cloud Endpoint
 
 
 ## Getting Started
